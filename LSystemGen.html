@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+    <head>
+        <title>Fractal Drawing</title>
+        <meta name="viewport" content="width = device-width, height = device-height, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+        <h2 class="title web">L-System Illustrator</h2>
+        <div class="systGenCtnr"> <!-- container for L-System generator-->
+            <form class="sysInputs" id="inputs">
+                <h4 class="title ctnr">L-System Settings</h4>
+                <ul>
+                    <li>
+                        <div class="symbolList">
+                            <p class="lbl">Symbol List (Limit 10) <a href="#" class="btn add" id="add">&plus;</a></p>
+                            <div id="sListCtnr"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <label for="axiom" class="lbl">Axiom: </label>
+                        <input id="axiom" type="text" size="3">
+                    </li>
+                    <li>
+                        <label for="itr" class="lbl">Iterations (Default = 0): </label>
+                        <input id="itr" type="number" max="50" min=1 value="1">
+                    </li>
+                    <li>
+                        <label class="lbl">Line Length (Default = 10): </label>
+                        <input id="linelength" type="number" max="300" min="1">
+                    </li>
+                    <li>
+                        <label class="lbl">Right Turn Degree (Default = 90): </label>
+                        <input class="tDegree" id="rtDegree" type="number" max=360 min=-360>
+                    </li>
+                    <li>
+                        <label class="lbl">Left Turn Degree (Default = 90): </label>
+                        <input class="tDegree" id="ltDegree" type="number" max=360 min=-360>
+                    </li>
+                    <li>
+                        <label for="stAngle">Starting Angle (Default = 90): </label>
+                        <input id="stAngle" type="number" max="360" min="-360">
+                    </li>
+                    <li>
+                        <label>Starting Point (Default = (300,300)): </label>
+                        <label for="xPoint">X: </label>
+                        <input class="stPoint" id="xPoint" type="number" max="600" min="0" size="2">
+                        <label for="yPoint">Y: </label>
+                        <input class="stPoint" id="yPoint" type="number" max="600" min="0" size="2">
+                    </li>
+                    <p>Note: canvas size is 600x600</p>
+                    <div class="btnCtnr">
+                        <input class="sub" type="button" value="Generate" id="gen">
+                    </div>
+                </ul>
+            </form>
+            
+        </div>
+        <label for="sOutput">Generated String:</label>
+        <input id="sOutput" type="text" size="30" readonly>
+        <br>
+        <div id="drawingArea">
+            <canvas class="d_Board" id="board" width="600" height="600"></canvas>
+        </div>
+        <script src="drawHandler.js" type="module"></script>
+    </body>
+</html>

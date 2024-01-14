@@ -1,0 +1,89 @@
+body{
+    background-image: linear-gradient(rgb(118, 83, 118), rgb(159, 212, 177));
+    display: flex;
+    flex-direction: column;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-item: center;
+}
+ul{
+    list-style: none;
+}
+
+.systGenCtnr{
+    background-color: white;
+    min-height: 300px;
+    width: 650px;
+    box-shadow: 0px 3px 4px black;
+    border-radius: 20px;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+}
+
+#sListCtnr{
+    display: flex;
+    background-color: rgb(111, 109, 109,0.5);
+    flex-direction: column;
+    max-width: 400px;
+}
+.d_Board{
+    background-color: rgb(25, 24, 24);
+}
+#drawingArea{
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.title{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.web{
+    
+    font-size: 45px;
+    color: white;
+}
+.ctnr{
+    font-size: 25px;
+    color: rgb(88, 143, 137)
+}
+.sub{
+    width: 80px;
+    height: 50px;
+    background-color: rgb(83, 108, 83);
+    color: white;
+}
+.btnCtnr{
+    height: 30px;
+    text-align: center;
+}
+.btn{
+    text-decoration: none;
+    display: inline-flex;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+.add{
+    background-color: rgb(116, 203, 116);
+}
+
+/* Dynamic input style */
+.ctntRow{
+    display: flex;
+    gap: 3px;
+}
+.delete{
+    background-color: rgb(181, 82, 82);
+    margin-left: 10px;
+}
